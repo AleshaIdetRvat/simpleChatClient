@@ -34,18 +34,21 @@ const App = () => {
 
     return (
         <div className="app">
-            <Preloader loading={isLoading} />
-            {state.isAuth ? (
-                <ChatPage {...state} />
-            ) : (
-                <EntryPage
-                    defaultName={state.userName}
-                    onLogin={onLogin}
-                    isLoading={isLoading}
-                    setLoading={setLoading}
-                />
-            )}
+            <ChatPage {...state} />
         </div>
+        // <div className="app">
+        //     <Preloader loading={isLoading} />
+        //     {state.isAuth ? (
+        //         <ChatPage {...state} />
+        //     ) : (
+        //         <EntryPage
+        //             defaultName={state.userName}
+        //             onLogin={onLogin}
+        //             isLoading={isLoading}
+        //             setLoading={setLoading}
+        //         />
+        //     )}
+        // </div>
     )
 }
 
