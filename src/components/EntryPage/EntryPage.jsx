@@ -32,7 +32,7 @@ const EntryPage = ({ onLogin, isLoading, setLoading, defaultName }) => {
         try {
             setError(null)
             setLoading(true)
-            await axios.post("/rooms", data)
+            await axios.post("https://tranquil-reef-66373.herokuapp.com/rooms", data)
 
             onLogin(data)
         } catch (error) {
