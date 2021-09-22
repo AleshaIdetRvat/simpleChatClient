@@ -30,6 +30,17 @@ const EntryPage = ({ onLogin, isLoading, setLoading, defaultName }) => {
 
     const onSubmit = async (data) => {
         try {
+            // let config = {
+            //     headers: {
+            //         Accept: "application/json",
+            //         "Access-Control-Allow-Origin": "*",
+            //         "X-Requested-With": "XMLHttpRequest",
+            //         "Access-Control-Allow-Methods": "GET,POST,PUT,DELETE,OPTIONS",
+            //         "Access-Control-Allow-Headers":
+            //             "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With",
+            //     },
+            // }
+
             setError(null)
             setLoading(true)
             await axios.post("https://tranquil-reef-66373.herokuapp.com/rooms", data)
