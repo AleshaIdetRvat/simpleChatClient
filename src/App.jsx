@@ -23,6 +23,13 @@ const App = () => {
         dispatch({ type: "SET_AUTH", payload: data })
         socket.emit("ROOM_JOIN", data)
     }
+
+    React.useEffect(() => {
+        let vh = window.innerHeight * 0.01
+        document.documentElement.style.setProperty("--vh", `${vh}px`)
+        //getting current window height, it's resolve problem for mobile browsers
+    }, [])
+
     React.useEffect(() => {
         socket.on("ROOM_SET_USERS", (users) => dispatch({ type: "SET_USERS", users }))
         socket.on("ROOM_SET_ALL_DATA", ({ users, messages }) => {
