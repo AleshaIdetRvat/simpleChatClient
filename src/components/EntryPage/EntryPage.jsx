@@ -33,6 +33,10 @@ const EntryPage = ({ onLogin, isLoading, setLoading, defaultName }) => {
             setError(null)
             setLoading(true)
             await axios.post("https://tranquil-reef-66373.herokuapp.com/rooms", data)
+            const getData = await axios.get(
+                "https://tranquil-reef-66373.herokuapp.com/rooms/1"
+            )
+            console.log("getData", getData)
 
             onLogin(data)
         } catch (error) {
@@ -66,7 +70,7 @@ const EntryPage = ({ onLogin, isLoading, setLoading, defaultName }) => {
                     />
 
                     <button className="entry-page__btn" type="submit">
-                        entry
+                        entryYYY
                     </button>
                 </form>
             </div>
