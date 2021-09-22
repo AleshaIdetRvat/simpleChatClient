@@ -13,7 +13,6 @@ const ChatPage = ({ userName, roomId, isAuth, users, messages }) => {
 
     const chatGoDown = () => {
         // it isn't action creator, it is dirty function!)
-        //const chatBody = document.getElementById("chat-msgs-body")
         chat.current.scrollTop = chat.current.scrollHeight
     }
 
@@ -36,7 +35,7 @@ const ChatPage = ({ userName, roomId, isAuth, users, messages }) => {
 
     return (
         <>
-            {/* <Preloader loading={!users.length} /> */}
+            <Preloader loading={!users.length} />
 
             <div class="chat-page">
                 <div class="chat-page__body">
@@ -115,27 +114,6 @@ const ChatPage = ({ userName, roomId, isAuth, users, messages }) => {
                                         {user}
                                     </div>
                                 ))}
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
-                                <div class="chat-page__user">testtsds</div>
                             </div>
                         </div>
                     </aside>
