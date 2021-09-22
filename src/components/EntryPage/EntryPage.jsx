@@ -81,7 +81,7 @@ const EntryPage = ({ onLogin, isLoading, setLoading, defaultName }) => {
                     />
 
                     <button className="entry-page__btn" type="submit">
-                        entryYYY
+                        entry
                     </button>
                 </form>
             </div>
